@@ -72,7 +72,7 @@ MainWindow::MainWindow(QWidget *parent) :
     qreal mapWidth = 1400; qreal mapHeigth = 700; qreal resolution=10;
 
 
-    /* //launch color map from here
+    /* //Uncomment this part to launch color map. (disactivate line 65)
     for (int w =0; w<(mapWidth/resolution); w++){
         for(int h=0; h<(mapHeigth/resolution); h++){
 
@@ -88,7 +88,7 @@ MainWindow::MainWindow(QWidget *parent) :
     } */
 
 
-    //visualize a ray tracing from here
+    // Uncomment this part to visualize rays from one transmitter to a specified receiver (created at line 65)
     sum = imageMethod2(transmitter, receiver, walls); // computation of the sum in the power computation formula
     qDebug() << "sum = " << sum;
     Prx = pow(he,2)*60*Gtx*Ptx*pow(sum,2) / (8*Ra); //see formula
